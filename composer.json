@@ -1,0 +1,26 @@
+{
+    "name": "fantata/laravel-simple-blog",
+    "description": "Simple Laravel Blog",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fantata\\LaravelSimpleBlog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Read",
+            "email": "chris@fantata.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fantata\\LaravelSimpleBlog\\LaravelSimpleBlogServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
