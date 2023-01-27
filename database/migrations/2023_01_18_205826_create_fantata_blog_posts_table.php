@@ -19,7 +19,8 @@ return new class extends Migration
             $table->text('content');
             $table->integer('status');
             $table->dateTime('published');
-            $table->integer('category_id')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
         });
     }

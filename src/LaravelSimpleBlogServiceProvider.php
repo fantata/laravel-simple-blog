@@ -11,12 +11,12 @@ class LaravelSimpleBlogServiceProvider extends ServiceProvider {
     {
 
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
-        //$this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        //$this->loadViewsFrom(__DIR__ . '/src/views', 'fantata');
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'fantata');
 
         $this->publishes([
-            __DIR__ . '/public' => public_path('vendor/fantata/blog'),
-            __DIR__ . './views' => resource_path('views/vendor/fantata/blog'),
+            __DIR__ . '/../public' => public_path('vendor/fantata'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/fantata'),
         ], 'public');
 
     }

@@ -11,5 +11,11 @@ class Post extends Model
   use HasFactory;
 
   protected $guarded = [];
+  protected $table = 'fantata_blog_posts';
+
+    public function author()
+    {
+        return $this->belongsTo(config('auth.providers.users.model'));
+    }
 
 }
